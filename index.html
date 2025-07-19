@@ -246,8 +246,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>【2025年4月】国内如何使用Claude（克劳德）的6种方法</h1>
-            <div class="update-date">更新日期：2025-04-19</div>
+            <h1>【2025年7月】国内如何使用Claude（克劳德）的6种方法</h1>
+            <div class="update-date">更新日期：<span id="update-date"></span></div>
             <p>6种可靠方法帮助您在中国访问Anthropic的领先Claude 3.7 Sonnet 模型</p>
         </header>
         
@@ -302,14 +302,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong><a href="https://chat.yixiaai.com" target="_blank">一下 AI</a></strong></td>
-                                <td>支持Claude 3.7 Sonnet、GPT 4o绘画、AI PPT、GPT-4.0、GPT-4.1 & mini、GPT-o1、GPT-o3、Gemini 2.5 Pro、Grok-3、DeepSeek r1 满血版、AI PPT、DeepSeek V3 0324、AI 翻译、联网查询等功能</td>
-                                <td><a href="https://chat.yixiaai.com" target="_blank" class="button">点击访问</a></td>
+                                <td><strong><a href="https://xsimplechat.com" target="_blank">一下 AI</a></strong></td>
+                                <td>支持Claude 3.7&4 Sonnet、GPT 4o绘画、AI PPT、GPT-4.0、GPT-4.1 & mini、GPT-o1、GPT-o3、Gemini 2.5 Pro、Grok-3、DeepSeek r1 满血版、AI PPT、DeepSeek V3 0324、AI 翻译、联网查询等功能</td>
+                                <td><a href="https://xsimplechat.com" target="_blank" class="button">点击访问</a></td>
                             </tr>
                             <tr>
-                                <td><strong><a href="https://chat.chatgpt-chinese.com/" target="_blank">蓝鲸 AI</a></strong></td>
-                                <td>Claude 3.7 Sonnet, GPT 4.0、GPT 4o 绘图，GPT 4.1、GPT4.1 mini、DeepSeek 满血版、Grok-3、Midjourney、高效简洁</td>
-                                <td><a href="https://chat.chatgpt-chinese.com/" target="_blank" class="button">点击访问</a></td>
+                                <td><strong><a href="https://chat.lanjingai.org/" target="_blank">蓝鲸 AI</a></strong></td>
+                                <td>Claude 3.7/4 Sonnet, GPT 4.0、GPT 4o 绘图，GPT 4.1、GPT4.1 mini、DeepSeek 满血版、Grok-3、Midjourney、高效简洁</td>
+                                <td><a href="https://chat.lanjingai.org/" target="_blank" class="button">点击访问</a></td>
                             </tr>
                             <tr>
                                 <td><strong><a href="https://deepseek-free.org/" target="_blank">智惠聚合 AI</a></strong></td>
@@ -430,7 +430,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">2. 国内稳定使用Claude的最佳选择是什么？</div>
-                    <div class="faq-answer">答：建议使用<a href="https://chat.yixiaai.com" target="_blank">一下AI平台</a>，功能齐全且易用。</div>
+                    <div class="faq-answer">答：建议使用<a href="https://xsimplechat.com" target="_blank">一下AI平台</a>，功能齐全且易用。</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">3. Claude支持哪些语言？</div>
@@ -452,9 +452,25 @@
         </main>
         
         <footer>
-            <p>最后更新: 2025-04-19 | Claude, Anthropic, 克劳德使用指南</p>
+            <p>最后更新: <span id="footer-update-date"></span> | Claude, Anthropic, 克劳德使用指南</p>
             <p>本文仅供参考，请遵守相关法律法规使用AI工具</p>
         </footer>
     </div>
+    <script>
+      function getNowDateString() {
+        var now = new Date();
+        var yyyy = now.getFullYear();
+        var mm = String(now.getMonth() + 1).padStart(2, '0');
+        var dd = String(now.getDate()).padStart(2, '0');
+        return yyyy + '-' + mm + '-' + dd;
+      }
+      window.onload = function() {
+        var nowStr = getNowDateString();
+        var updateDate = document.getElementById('update-date');
+        if (updateDate) updateDate.textContent = nowStr;
+        var footerUpdate = document.getElementById('footer-update-date');
+        if (footerUpdate) footerUpdate.textContent = nowStr;
+      }
+    </script>
 </body>
 </html>
